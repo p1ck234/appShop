@@ -9,6 +9,84 @@
       Title="TovarPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите название для поиска:"
+                           TextAlignment="Right"
+                           FontSize="14" FontFamily="Tahoma" VerticalAlignment="Center"/>
+                <TextBox Width="200" Name="tbSearch" 
+                         TextChanged="tbSearch_TextChanged"/>
+                <CheckBox Name="CheckActual" Checked="CheckActual_Checked"
+                          Unchecked="CheckActual_Unchecked" 
+                          Content="Показывать только актуальное"
+                          HorizontalAlignment="Center" VerticalAlignment="Center"
+                          Margin="5,0,0,0" FontSize="14" FontFamily="Tahoma"/>
+                <Button Content="Заказать" Name="btnBuy" Click="btnBuy_Click" 
+                        Height="30" Margin="10,0,0,0"/>
+                <Button Content="Добавить" Name="btnAdd" Click="btnAdd_Click" 
+                        Height="30" Margin="10,0,0,0" Visibility="Hidden"/>
+                <Button Content="Обновить" Name="btnRel" Click="btnRel_Click" 
+                        Height="30" Margin="10,0,0,0" Visibility="Hidden"/>
+                <Button Content="Редактировать" Name="btnRed" Click="btnRed_Click" 
+                        Height="30" Margin="10,0,0,0" Visibility="Hidden"/>
+                <Button Content="Удалить" Name="btnDel" Click="btnDel_Click" 
+                        Height="30" Margin="10,0,0,0" Visibility="Hidden"/>
+            </StackPanel>
+        </WrapPanel>
+
+        <ListView Grid.Row="1" Name="lvTovar" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  HorizontalContentAlignment="Center">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"
+                               HorizontalAlignment="Center"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="20" Width="400">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="310"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Height="300" Grid.Row="1"
+                               HorizontalAlignment="Center" Margin="5">
+                            <Image.Source>
+                                <Binding Path="MainImagePath">
+                                    <Binding.TargetNullValue>
+                                        <ImageSource>Resources/1.png</ImageSource>
+                                    </Binding.TargetNullValue>
+                                </Binding>
+                            </Image.Source>
+                            <Image.ToolTip>
+                                <ToolTip Width="auto" MaxWidth="300">
+                                    <TextBlock TextWrapping="Wrap"
+                                               Text="{Binding Description}">
+                                    </TextBlock>
+                                </ToolTip>
+                            </Image.ToolTip>
+                        </Image>
+                        <TextBlock Text="{Binding Title}" VerticalAlignment="Center" 
+                                   TextAlignment="Center"
+                                   Width="390" TextWrapping="Wrap" 
+                                   HorizontalAlignment="Center"
+                                   Margin="5,5" FontSize="26" Grid.Row="0"/>
+                        <TextBlock Text="{Binding Cost,StringFormat={}{0:N2} РУБ}" 
+                                   Grid.Row="2" Margin="5,5,5,15" 
+                                   HorizontalAlignment="Center"
+                                   FontSize="26" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding ActualText}" Grid.Row="3" 
+                                   FontSize="14" HorizontalAlignment="Left"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

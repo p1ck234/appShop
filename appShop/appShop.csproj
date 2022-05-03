@@ -65,12 +65,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BuyWindow.xaml.cs">
+      <DependentUpon>BuyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RedWindow.xaml.cs">
+      <DependentUpon>RedWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TableTovarPage.xaml.cs">
       <DependentUpon>TableTovarPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="TovarPage.xaml.cs">
       <DependentUpon>TovarPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowAdd.xaml.cs">
+      <DependentUpon>WindowAdd.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BuyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,11 +110,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TableTovarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TovarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
