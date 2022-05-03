@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:appShop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Icon="Resources/icon.ico"
+     Title="Окно авторизации" Height="400" Width="400" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#00c6ff">
+            <TextBlock Text="Магазин" FontSize="24" VerticalAlignment="Center"
+                       HorizontalAlignment="Center" Margin="150,0,0,0"
+                       Style="{StaticResource tbSetting}"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource tbSetting}" Text="Логин"/>
+            <TextBox Name="tbLogin" Style="{StaticResource tBoxSetting}" 
+                     Grid.Column="1" PreviewTextInput="tbLogin_PreviewTextInput"/>
+            <TextBlock Style="{StaticResource tbSetting}" Grid.Row="1"
+                       Text="Пароль"/>
+            <PasswordBox Name="tbPass" Grid.Row="1" Grid.Column="1" Width="145" 
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center" FontFamily="Tahoma"
+                         FontWeight="Bold" FontSize="16"/>
+            <Button Name="btnEnter" Grid.Row="2" Content="Войти"
+                    Click="btnEnter_Click"/>
+            <Button Name="btnQuit" Grid.Row="2" Grid.Column="1" Content="Выход"
+                    Click="btnQuit_Click"/>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Background="#00c6ff"/>
     </Grid>
 </Window>
