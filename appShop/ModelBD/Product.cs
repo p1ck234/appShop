@@ -28,5 +28,12 @@ namespace appShop.ModelBD
         [Required]
         [StringLength(50)]
         public string Category { get; set; }
+        public string ActualText
+        {
+            get
+            {
+                return isActive ? "Актуально" : "Неактуально";
+            }
+        }
     }
 }

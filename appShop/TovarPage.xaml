@@ -65,7 +65,7 @@
                                     </Binding.TargetNullValue>
                                 </Binding>
                             </Image.Source>
-                            <Image.ToolTip>
+                             <Image.ToolTip>
                                 <ToolTip Width="auto" MaxWidth="300">
                                     <TextBlock TextWrapping="Wrap"
                                                Text="{Binding Description}">
