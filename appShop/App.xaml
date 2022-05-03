@@ -88,5 +88,10 @@
         <Style TargetType="CheckBox">
             <Setter Property="FontSize" Value="18"/>
         </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
     </Application.Resources>
 </Application>
