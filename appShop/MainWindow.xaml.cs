@@ -23,7 +23,7 @@ namespace appShop
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static ModelBD.Model1 bd = new ModelBD.Model1();
+        public static ModelBD.BaseModel bd = new ModelBD.BaseModel();
 
         public MainWindow()
         {

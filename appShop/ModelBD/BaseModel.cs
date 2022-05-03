@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace appShop.ModelBD
 {
-    public partial class Model1 : DbContext
+    public partial class BaseModel : DbContext
     {
-        public Model1()
+        public BaseModel()
             : base("name=BaseModel")
         {
         }

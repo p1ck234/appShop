@@ -18,5 +18,7 @@ namespace appShop.ModelBD
 
         [Column(TypeName = "date")]
         public DateTime date { get; set; }
+
+        public int count { get; set; }
     }
 }

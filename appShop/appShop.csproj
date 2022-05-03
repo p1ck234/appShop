@@ -68,6 +68,10 @@
     <Compile Include="BuyWindow.xaml.cs">
       <DependentUpon>BuyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModelBD\BaseModel.cs" />
+    <Compile Include="ModelBD\Product.cs" />
+    <Compile Include="ModelBD\ProductSale.cs" />
+    <Compile Include="ModelBD\User.cs" />
     <Compile Include="RedWindow.xaml.cs">
       <DependentUpon>RedWindow.xaml</DependentUpon>
     </Compile>
@@ -129,10 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Manager.cs" />
-    <Compile Include="ModelBD\Model1.cs" />
-    <Compile Include="ModelBD\Product.cs" />
-    <Compile Include="ModelBD\ProductSale.cs" />
-    <Compile Include="ModelBD\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

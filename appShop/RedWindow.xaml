@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:appShop"
         mc:Ignorable="d"
-        Title="RedWindow" Height="450" Width="800">
-    <Grid>
-        
+        Icon="Resources/icon.ico"
+        Title="Окно редактирования" Height="400" Width="450" ResizeMode="NoResize">
+    <Grid Background="#00c6ff">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Style="{StaticResource tbSetting}" Text="Название"
+                       Margin="10"/>
+            <TextBox Style="{StaticResource tBoxSetting}" Width="300"
+                     Name="tbName" PreviewTextInput="tbName_PreviewTextInput"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBlock Style="{StaticResource tbSetting}" Text="Стоимость"
+                       Margin="10"/>
+            <TextBox Style="{StaticResource tBoxSetting}" Width="300"
+                     Name="tbPrice" PreviewTextInput="tbPrice_PreviewTextInput"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <TextBlock Style="{StaticResource tbSetting}" Text="Описание"
+                       Margin="10"/>
+            <TextBox Style="{StaticResource tBoxSetting}" Width="300"
+                     Name="tbDescript" PreviewTextInput="tbDescript_PreviewTextInput"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <TextBlock Style="{StaticResource tbSetting}" Text="Категория"
+                       Margin="10"/>
+            <ComboBox Style="{StaticResource tComboBoxSetting}"
+                      Name="cmbCat"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="4">
+            <TextBlock Style="{StaticResource tbSetting}" Text="Актуальность"
+                       Margin="10"/>
+            <ComboBox Style="{StaticResource tComboBoxSetting}"
+                      Name="cmbActual"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center">
+            <Button Content="Сохранить" Margin="10" Name="btnSave" Click="btnSave_Click"/>
+            <Button Content="Выход" Margin="10" Name="btnExit" Click="btnExit_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
